@@ -5,13 +5,13 @@
 
 
  header {max-width: 100%;
-        min-height:150px;
+        min-height:100px;
         background-color:#fff;}
 
  .border {border:20px solid black;}
 
  .menu {max-width: 100%;
-        min-height:100px;
+        min-height:52px;
         margin:20px auto 0;
  }
 
@@ -46,8 +46,11 @@ a:active {background-color: dodgerblue;}
       
        clip-path: polygon(0 0, 100% 0, 100% 80%,50% 100%,0 80% );
 }
+
+.polygon:active {background-color: dodgerblue;}
+
 @media all and (max-width:767px){
-.text {width: 100%;
+.text {width:100%;
        }}
 
 .text p  {   display:flex;
@@ -55,11 +58,11 @@ a:active {background-color: dodgerblue;}
         max-width: 70%;
        color: cornsilk;
        text-align: center;
-       font-size: 30px;
+       font-size: 20px;
         text-transform:uppercase;
         top:130px;
        left: 200px; }
- 
+      
  section {width: 100%;
          min-height: 500px;
          display: inline-block; } 
@@ -77,11 +80,11 @@ a:active {background-color: dodgerblue;}
 h1   {font-size: 30px;
      color: dodgerblue;}
 
-@media all and (min-width:1201px){
+@media all and (min-width:1200px){
  .img-box {width: 100%;
          min-height: 300px;
          margin:100px auto 0;
-        background-color: dodgerblue;} }
+        color: dodgerblue;} }
  .img {width:calc(100%/3);
        display: inline;
        float: left;
