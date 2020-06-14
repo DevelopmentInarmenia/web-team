@@ -1,8 +1,9 @@
 const route = require('express').Router();
 const fs = require('fs');
 const path = require('path');
+const valid = require('../config/valid');
 
-route.put('/update_data', function (req, res) {
+route.put('/update_data', valid, function (req, res) {
     const file_name = req.body.file_name;
     const data = req.body.data;
 

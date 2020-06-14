@@ -1,7 +1,9 @@
 const route = require('express').Router();
 const fs = require('fs');
 const path = require('path');
-route.post('/insert_data', function (req, res) {
+const valid = require('../config/valid');
+
+route.post('/insert_data', valid, function (req, res) {
 
     const { file_name, data } = req.body;
     let path_file = path.resolve(__dirname + '/..' + '/users/' + file_name);
