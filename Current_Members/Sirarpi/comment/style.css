@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23DCEFFA' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.container {
+  margin-top: 50px;
+}
+.media img {
+  width: 20%;
+}
+.add_comment,
+#submit {
+  background-image: repeating-linear-gradient(45deg, #5d88a0, #155c86 100px);
+  color: white;
+}
+#show_form {
+  width: 50%;
+}
+
+#submit {
+  padding: 15px;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  float: right;
+}
+form {
+  background-color: #d0ebfb7a;
+  padding: 20px;
+  overflow: hidden;
+}
+
+input,
+textarea {
+  width: 100%;
+  outline: none;
+  padding: 8px 5px;
+  margin-bottom: 10px;
+  resize: none;
+  border: 1px solid #8ebad4;
+  border-radius: 5px;
+  display: block;
+}
+.comment_area {
+  width: 60%;
+  margin: 20px auto;
+  background-color: #dceffaa6;
+  border: 1px solid #8ebad4;
+  border-radius: 5px;
+  padding: 8px 5px;
+}
+.comment_area > h5:first-child {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.comment_area > h5:last-child {
+  font-style: italic;
+  font-size: 16px;
+  word-break: break-all;
+}
