@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body>
+<div id="clock">
+
+    <div class="needle-second">
+    </div>
+    <div class="needle-minute">
+    </div>
+    <div class="needle-hour">
+    </div>
+
+</div>
+
+    <style>
+
+#clock{
+    background: url('libs/img/clock.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    margin: auto;
+    margin-top: 20px;
+    width:300px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius:50%;
+}
+
+.needle-second{
+    width:2px;
+    height:120px;
+    margin:auto;
+    margin-top: 30px;
+    background-color:red;
+    transform-origin:bottom;
+}
+
+.needle-minute{
+    width:4px;
+    height:120px;
+    margin:auto;
+    margin-top:-120px;
+    background-color:black;
+    transform-origin:bottom;
+}
+
+.needle-hour{  
+    width:6px;
+    height:60px;
+    margin:auto;
+    margin-top:-60px;
+    background-color:black;
+    transform-origin:bottom;
+}
+
+.needle-second, .needle-minute, .needle-hour {
+    clip-path: polygon(50% 0%, 100% 30%, 98% 77%, 87% 91%, 71% 98%, 50% 100%, 33% 99%, 13% 93%, 2% 77%, 0 30%);
+    -moz-clip-path: polygon(50% 0%, 100% 30%, 98% 77%, 87% 91%, 71% 98%, 50% 100%, 33% 99%, 13% 93%, 2% 77%, 0 30%);
+    -webkit-clip-path: polygon(50% 0%, 100% 30%, 98% 77%, 87% 91%, 71% 98%, 50% 100%, 33% 99%, 13% 93%, 2% 77%, 0 30%);
+}
+
+    </style>
+
+
+
+<script>
+
+var sec = document.querySelector('.needle-second');
+var min = document.querySelector('.needle-minute');
+var hour = document.querySelector('.needle-hour');
+
+var t = new Date();
+console.log(t);
+
+var x = t.getSeconds() * 6;
+var y = t.getMinutes() * 6;
+var z = t.getHours() * 30 - 360 + ((y - y%72)/72 * 6);
+
+console.log(z, y, x)
+
+setInterval(function(){
+
+    x = x + 6;
+    sec.style.transform = 'rotate('+ x +'deg)';
+
+if(x == 360){
+    x = 0;
+    y = y + 6;
+    if(y%72 == 0){
+        z = z + 6;
+        if(y == 360){
+            y = 0;
+        }
+    }
+};
+
+min.style.transform = 'rotate('+ y +'deg)';
+hour.style.transform = 'rotate('+ z +'deg)';
+
+if(z == 360){
+    z = 0;
+};
+
+
+}, 1000); 
+
+
+</script>
+
+    
+</body>
+</html>
