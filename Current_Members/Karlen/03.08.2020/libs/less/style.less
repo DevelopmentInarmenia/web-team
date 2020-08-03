@@ -1,0 +1,220 @@
+
+
+.container{
+
+    max-width: 1600px;
+    float: none;
+    margin: auto;
+}
+
+.header{
+    display:flex;
+    position: fixed;
+    width:100%;
+    background-color:rgb(88, 83, 83);
+    justify-content: space-around;
+    .logo{
+        padding:17px 0;
+    }
+
+    .menu{
+        ul{
+            list-style: none;
+            padding:12px 0;
+
+            li{
+                display:inline-block;
+                margin-right: 15px;
+
+                a{
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 18px;
+                    color:white;
+                }
+                a:hover{
+                    color:silver;
+                }
+            }
+        }
+    }
+}
+
+.mobile-menu{
+    display:none;
+}
+
+@media all and (max-width: 767px){
+    .header{
+        .menu{
+            width:50%;
+            ul{
+                display:none;
+                width:50%;
+                margin-right: 0;
+                position:absolute;
+                background-color:rgb(88, 83, 83);
+                margin-top: 50px;
+
+                li{
+                    display:block;
+                    margin-top: 10px;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+
+    .mobile-menu{
+        display:block;
+        float: right;
+        width:40px;
+        margin-top: 15px;
+    }
+
+}
+
+.content{
+    background-color:rgb(104, 97, 97);
+    #home{
+        display:flex;
+        .home-left{
+            padding: 15px;
+            width:50%;
+        }
+        .home-right{
+            padding: 15px;
+            width:50%;
+        }
+    }
+
+    #about{
+        text-align: center;
+        color:rgb(71, 35, 35);
+        font-weight: bold;
+        padding:0 5%;
+        .about-content{
+            font-size: 18px;
+        }
+        @media all and (min-width:768px){
+              padding: 0 20%;
+        }
+    }
+
+    #contact{
+        padding:40px 0;
+
+        .form{
+            width:50%;
+            float:none;
+            margin: auto;
+            max-width:700px;
+            @media all and (max-width:767px){
+                width:70%;
+            }
+            @media all and (max-width:530px){
+                width:100%;
+            }
+
+            .contact-form{
+
+                .form-row{
+                    text-align: center;
+                    margin:10px 0;
+              
+                    .col-left{
+                        input{
+                            width:70%;
+                            min-height:30px;
+                            font-size: 16px;
+                        }
+                        margin-bottom: 10px;
+                    }
+                    .col-right{
+                        input{
+                            width:70%;
+                            min-height:30px;
+                            font-size: 16px;
+
+                        }
+                    }
+                    .col-full{
+                        select{
+                            width:60%;
+                            min-height: 30px;
+                            margin-bottom: 10px;
+                            font-size: 16px;
+
+                        }
+                    }
+
+                    .message{
+                        width:60%;
+                        font-size: 16px;
+                    }
+
+                    button{
+                        font-size: 16px;
+                        font-weight: bold;
+                        padding: 5px 10px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.footer{
+    background-color:rgb(88, 83, 83);
+    color:white;
+    padding:15px 1%;
+    .top-footer{
+        display:flex;
+        justify-content: space-around;
+        @media all and (max-width: 767px){
+            flex-direction: column;
+        }
+        .footer-col{
+            text-align: center;
+            @media all and (max-width: 767px){
+                width:80%;
+                margin: auto;
+            }
+            .social-links{
+                    li{
+                        width:100%;
+                        text-align: center;
+                        img{
+                        width:25px;
+                        }
+                    }             
+            }
+            .footer-img{
+                width:160px;
+                margin-top: 17px;
+            }
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            li{
+                margin:7px 0;
+            }
+        }
+        a{
+            text-decoration: none;
+            color:white;
+            font-weight: bold;
+        }
+        a:hover{
+            color:silver;
+        }
+    }
+    .bottom-footer{
+        text-align: center;
+        padding:40px 0 5px;
+        
+    }
+}
